@@ -12,11 +12,6 @@ galleryRef.insertAdjacentHTML('beforeend', getGalleryMarkup(galleryItems));
 
 galleryRef.addEventListener('click', onGalleryClick);
 
-
-
-
-
-
 function getElementMarkup({preview, original, description}) {
    return `<li class="gallery__item">
   <a
@@ -38,7 +33,6 @@ function getGalleryMarkup(elements) {
         return getElementMarkup(element);
     }).join('');
 }
-console.log(imgArray);
 function onGalleryClick(e) {
     e.preventDefault();
     if (e.target.nodeName !== 'IMG') {
